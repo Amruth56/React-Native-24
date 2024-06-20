@@ -7,9 +7,11 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "black"
+        
       }}
     >
-      <Text>Hello World</Text>
+      <Text style={{color:'white'}}>Hello World</Text>
     </View>
   );
 }
