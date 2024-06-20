@@ -11,7 +11,7 @@ export default function Index() {
         
       }}
     >
-      <Text style={{color:'white'}}>Hello World</Text>
+      <Text style={{color:'white'}}>namaste World</Text>
     </View>
   );
 }
