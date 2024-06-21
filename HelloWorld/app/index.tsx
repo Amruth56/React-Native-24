@@ -1,4 +1,5 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
+const logoImg = require("@/assets/images/partial-react-logo.png");
 
 import React from "react";
 
@@ -8,12 +9,15 @@ export default function Index() {
       style={{
         flex: 1,
         backgroundColor: "black",
-        justifyContent: "center"
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-   
-   <Text  style={{color:"white", textAlign:"center"}}>
-    <Text style = {{color:'pink'}}>Hello</Text> World</Text>
+      <Text style={{ color: "white", textAlign: "center" }}>
+        <Text style={{ color: "pink" }}>Hello</Text> World
+      </Text>
+
+      <Image source={logoImg} style={{ width: 300, height: 300 }} />
     </View>
   );
 }
