@@ -12,7 +12,8 @@ export default function Index() {
       }}
     >
    
-   <Text  style={{color:"white", textAlign:"center"}}>Hello World</Text>
+   <Text  style={{color:"white", textAlign:"center"}}>
+    <Text style = {{color:'pink'}}>Hello</Text> World</Text>
     </View>
   );
 }
