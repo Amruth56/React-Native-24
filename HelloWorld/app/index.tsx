@@ -1,4 +1,4 @@
-import { View, Text, Image, ImageBackground, ScrollView } from "react-native";
+import { View, Text, Image, ImageBackground, ScrollView, Button } from "react-native";
 const logoImg = require("@/assets/images/partial-react-logo.png");
 
 import React from "react";
@@ -22,6 +22,7 @@ export default function Index() {
           source={{ uri: "https://picsum.photos/200/300" }}
           style={{ width: 300, height: 300 }}
         ></Image>
+        <Button title="press"></Button>
         <Text style={{ color: "white" }}>
           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
           and typesetting industry. Lorem Ipsum has been the industry's standard
