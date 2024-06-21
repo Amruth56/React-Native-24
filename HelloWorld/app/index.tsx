@@ -7,6 +7,7 @@ import {
   Button,
   Pressable,
   Modal,
+  StatusBar
 } from "react-native";
 import { useState } from "react";
 const logoImg = require("@/assets/images/partial-react-logo.png");
@@ -25,6 +26,8 @@ export default function Index() {
         padding: 40,
       }}
     >
+
+      <StatusBar backgroundColor="black" barStyle={'default'}></StatusBar>
       <ScrollView>
         <Text style={{ color: "white", textAlign: "center" }}>
           <Text style={{ color: "pink" }}>lorem87</Text> World
