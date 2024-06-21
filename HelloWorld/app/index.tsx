@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 import React from "react";
 
@@ -8,26 +8,11 @@ export default function Index() {
       style={{
         flex: 1,
         backgroundColor: "black",
+        justifyContent: "center"
       }}
     >
-      <View
-        style={{
-          backgroundColor: "lightblue",
-          width: 200,
-          height: 200,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      ></View>
-      <View
-        style={{
-          backgroundColor: "lightgreen",
-          width: 200,
-          height: 200,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      ></View>
+   
+   <Text  style={{color:"white", textAlign:"center"}}>Hello World</Text>
     </View>
   );
 }
