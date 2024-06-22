@@ -7,7 +7,8 @@ import {
   Button,
   Pressable,
   Modal,
-  StatusBar
+  StatusBar, 
+  ActivityIndicator
 } from "react-native";
 import { useState } from "react";
 const logoImg = require("@/assets/images/partial-react-logo.png");
@@ -26,6 +27,8 @@ export default function Index() {
         padding: 40,
       }}
     >
+
+      <ActivityIndicator size="large" color="red"></ActivityIndicator>
 
       <StatusBar backgroundColor="black" barStyle={'default'}></StatusBar>
       <ScrollView>
