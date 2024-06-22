@@ -12,7 +12,9 @@ import {
   Alert,
 } from "react-native";
 import { useState } from "react";
+import Greet from '@/components/greet'
 const logoImg = require("@/assets/images/partial-react-logo.png");
+
 
 import React from "react";
 
@@ -29,6 +31,8 @@ export default function Index() {
       }}
     >
        
+       <Greet name = "Bruce Wayne"></Greet>
+       <Greet name = "Clark Kent"></Greet>
       <Button title="Aler" onPress={()=>Alert.alert("Invalid data!", "Incorrect DOB")}></Button> 
       <Button
         title="Alert"
