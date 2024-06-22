@@ -7,8 +7,9 @@ import {
   Button,
   Pressable,
   Modal,
-  StatusBar, 
-  ActivityIndicator
+  StatusBar,
+  ActivityIndicator,
+  Alert,
 } from "react-native";
 import { useState } from "react";
 const logoImg = require("@/assets/images/partial-react-logo.png");
@@ -27,10 +28,32 @@ export default function Index() {
         padding: 40,
       }}
     >
-
+       
+      <Button title="Aler" onPress={()=>Alert.alert("Invalid data!", "Incorrect DOB")}></Button> 
+      <Button
+        title="Alert"
+        onPress={() => Alert.alert("Invalid Data", "DOB incorrect", [
+          {
+            text:'idk',
+            onPress: ()=>console.log("checking") // messages are defined in the event handlers 
+          },
+          {
+            text:'cancel',
+            onPress:()=>console.log("cancel pressed")
+          },
+          {
+            text:'ok',
+            onPress:()=>console.log("ok pressed")
+            
+          },
+          {
+            text:'idk2',
+            onPress: ()=>console.log("checking")
+          }
+        ])}
+      ></Button>
       <ActivityIndicator size="large" color="red"></ActivityIndicator>
-
-      <StatusBar backgroundColor="black" barStyle={'default'}></StatusBar>
+      <StatusBar backgroundColor="black" barStyle={"default"}></StatusBar>
       <ScrollView>
         <Text style={{ color: "white", textAlign: "center" }}>
           <Text style={{ color: "pink" }}>lorem87</Text> World
@@ -84,7 +107,7 @@ export default function Index() {
         visible={isModalVisible}
         onRequestClose={() => setIsModalVisible(false)} // if we click on back button
         animationType="fade"
-        presentationStyle="fullScreen"  //on;ly affects IOS and not android 
+        presentationStyle="fullScreen" //only affects IOS and not android
       >
         <View style={{ flex: 1, backgroundColor: "lightblue", padding: 20 }}>
           <Text>Modal Content</Text>
