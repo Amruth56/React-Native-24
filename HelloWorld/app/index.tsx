@@ -10,33 +10,21 @@ import {
   StatusBar,
   ActivityIndicator,
   Alert,
+  StyleSheet
 } from "react-native";
 import { useState } from "react";
-import App1 from '@/components/coreComponents'
-import Greet from '@/components/greet'
-// const logoImg = require("@/assets/images/partial-react-logo.png");
-
-
+import App1 from "@/components/coreComponents";
+import Greet from "@/components/greet";
 import React from "react";
+import Styling from '@/stylingRN/inLine'
+import StyleApi from '@/stylingRN/styleSheetApi'
 
 export default function Index() {
-  <App1></App1>
+ return(
+  // <App1></App1>
+
+  // <Styling></Styling>
+  <StyleApi></StyleApi>
+
+ )
 }
-
-// import { Text, View } from "react-native";
-
-// export default function Index() {
-//   return (
-//     <View
-//       style={{
-//         flex: 1,
-//         justifyContent: "center",
-//         alignItems: "center",
-//         backgroundColor: "black"
-
-//       }}
-//     >
-//       <Text style={{color:'white'}}>hello World</Text>
-//     </View>
-//   );
-// }
