@@ -4,11 +4,14 @@ export default function StyleApi() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Style Sheet API</Text>
-
-      <View style={[styles.lightGreenBg, styles.box]}>
-        <Text>Light green box</Text>
+      <View>
+        <Text style={styles.title}>Style Inheritance</Text>
       </View>
-      <View style={[styles.lightBlueBg, styles.box]}>
+
+      <View style={[styles.lightGreenBg, styles.box, styles.border, styles.boxShadow]}>
+        <Text style ={{borderRadius:5, backgroundColor:"white"}}>Light green box</Text>
+      </View>
+      <View style={[styles.lightBlueBg, styles.box, styles.border, styles.androidShadow]}>
         <Text>Light blue box</Text>
       </View>
     </View>
@@ -18,7 +21,7 @@ export default function StyleApi() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "brown",
+    backgroundColor: "pink",
     padding: 40,
   },
   title: {
@@ -35,11 +38,31 @@ const styles = StyleSheet.create({
   },
   box: {
     width: "50%",
-    height: 100,
+    height: 250,
     // padding: 20,
     paddingHorizontal: 10,
     paddingVertical: 20,
     margin: 20,
-    borderRadius: 15,
+ 
   },
+  border:{
+    borderRadius: 15,
+    borderStyle:"solid",
+    borderWidth: 4,
+    borderColor:"black"
+  },
+  boxShadow:{
+    shadowColor:"#333333",
+    shadowOffset:{
+      width:6,
+      height:6
+    },
+    shadowOpacity:0.6,
+    shadowRadius:6
+
+  },
+  androidShadow:{
+    elevation: 90,
+    shadowColor:"midnightblue",
+  }
 });
