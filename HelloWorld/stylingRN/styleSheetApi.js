@@ -3,13 +3,13 @@ import { View, Text, StyleSheet } from "react-native";
 export default function StyleApi() {
   return (
     <View style={styles.container}>
-      <Text style = {styles.title}>Style Sheet API</Text>
+      <Text style={styles.title}>Style Sheet API</Text>
 
-      <View style = {[styles.lightGreenBg, styles.box]}>
+      <View style={[styles.lightGreenBg, styles.box]}>
         <Text>Light green box</Text>
       </View>
-      <View style = {[styles.lightBlueBg, styles.box]}>
-        <Text >Light blue box</Text>
+      <View style={[styles.lightBlueBg, styles.box]}>
+        <Text>Light blue box</Text>
       </View>
     </View>
   );
@@ -21,24 +21,25 @@ const styles = StyleSheet.create({
     backgroundColor: "brown",
     padding: 40,
   },
-  title:{
+  title: {
     fontSize: 24,
-    color:"white",
-    fontStyle:"italic"
+    color: "white",
+    fontStyle: "italic",
   },
-  lightBlueBg:{
+  lightBlueBg: {
     backgroundColor: "lightblue",
     // fontSize: 25,
-
   },
-  lightGreenBg:{
-    backgroundColor:"lightgreen",
-    
+  lightGreenBg: {
+    backgroundColor: "lightgreen",
   },
-  box:{
-    width:100,
-    height:100,
-    padding:20
-  }
-
+  box: {
+    width: "50%",
+    height: 100,
+    // padding: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+    margin: 20,
+    borderRadius: 15,
+  },
 });
