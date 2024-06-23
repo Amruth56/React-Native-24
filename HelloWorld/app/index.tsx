@@ -27,11 +27,11 @@ export default function Index() {
     // <Styling></Styling>
     // <StyleApi></StyleApi>
     <View style={styles.container}>
-      <Box style={{ backgroundColor: "brown", flex: 1 }}>Box1</Box>
+      <Box style={{ backgroundColor: "brown"}}>Box1</Box>
       <Box style={{ backgroundColor: "black" }}>Box2</Box>
       <Box style={{ backgroundColor: "violet" }}>Box3</Box>
       <Box style={{ backgroundColor: "pink", flex: 3 }}>Box4</Box>
-      <Box style={{ backgroundColor: "green" }}>Box5</Box>
+       <Box style={{ backgroundColor: "green" }}>Box5</Box>
       <Box style={{ backgroundColor: "blue", flex: 1 }}>Box6</Box>
       <Box style={{ backgroundColor: "indigo" }}>Box7</Box>
     </View>
@@ -41,6 +41,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection:'row-reverse',
     marginTop: 64,
     borderWidth: 6,
     borderColor: "yellow",
