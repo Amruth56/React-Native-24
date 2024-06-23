@@ -5,11 +5,11 @@ export default function StyleApi() {
     <View style={styles.container}>
       <Text style = {styles.title}>Style Sheet API</Text>
 
-      <View style = {styles.lightGreenBox}>
+      <View style = {[styles.lightGreenBg, styles.box]}>
         <Text>Light green box</Text>
       </View>
-      <View style = {styles.lightBlueBox}>
-        <Text>Light blue box</Text>
+      <View style = {[styles.lightBlueBg, styles.box]}>
+        <Text >Light blue box</Text>
       </View>
     </View>
   );
@@ -24,20 +24,21 @@ const styles = StyleSheet.create({
   title:{
     fontSize: 24,
     color:"white",
+    fontStyle:"italic"
   },
-  lightBlueBox:{
+  lightBlueBg:{
     backgroundColor: "lightblue",
     // fontSize: 25,
+
+  },
+  lightGreenBg:{
+    backgroundColor:"lightgreen",
+    
+  },
+  box:{
     width:100,
     height:100,
     padding:20
-  },
-  lightGreenBox:{
-    backgroundColor:"lightgreen",
-    
-  }
-  box:{
-    
   }
 
 });
