@@ -40,10 +40,12 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     // justifyContent:"space-around",
-    alignItems: "baseline",
-    flexDirection:'column',
+    flexWrap:"wrap-reverse",
+    // alignItems: "baseline",
+    // flexDirection:'column',
+    height:300,
     marginTop: 64,
     borderWidth: 6,
     borderColor: "yellow",
