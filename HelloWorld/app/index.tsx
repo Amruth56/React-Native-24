@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent:"space-between",
-    flexDirection:'column',
+    flexDirection:'row',
     marginTop: 64,
     borderWidth: 6,
     borderColor: "yellow",
