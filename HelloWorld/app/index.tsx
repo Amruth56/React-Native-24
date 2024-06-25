@@ -27,11 +27,11 @@ export default function Index() {
     // <Styling></Styling>
     // <StyleApi></StyleApi>
     <View style={styles.container}>
-      <Box style={{ backgroundColor: "brown", alignSelf:'flex-end'}}>Box1</Box>
-      <Box style={{ backgroundColor: "black", alignSelf:"center" }}>Box2</Box>
-      <Box style={{ backgroundColor: "violet", alignSelf:"stretch" }}>Box3</Box>
-      <Box style={{ backgroundColor: "pink", flex: 3 }}>Box4</Box>
-       <Box style={{ backgroundColor: "green"  }}>Box5</Box>
+      <Box style={{ backgroundColor: "brown" }}>Box1 - shrink</Box>
+      <Box style={{ backgroundColor: "black", flexShrink: true }}>Box2 - shrink</Box>
+      {/* <Box style={{ backgroundColor: "violet", alignSelf:"stretch" }}>Box3</Box> */}
+      {/* <Box style={{ backgroundColor: "pink", flex: 3 }}>Box4</Box> */}
+      {/* <Box style={{ backgroundColor: "green"  }}>Box5</Box> */}
       {/* <Box style={{ backgroundColor: "blue", flex: 1 }}>Box6</Box> */}
       {/* <Box style={{ backgroundColor: "indigo" }}>Box7</Box> */}
     </View>
@@ -40,17 +40,18 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     // justifyContent:"space-around",
-    flexWrap:"wrap",
-    // alignItems: "baseline",
-    alignContent:"stretch",
-    // flexDirection:'column',
+    // flexWrap:"wrap",
+    alignItems: "flex-start",
+    // alignContent:"stretch",
+    flexDirection: "row",
 
-    rowGap:20,
-    columnGap:20,
-    gap:10,
-    height:250,
+    // rowGap:20,
+    // columnGap:20,
+    // gap:10,
+    // height:250,
+    width: 200,
     marginTop: 64,
     borderWidth: 6,
     borderColor: "yellow",
