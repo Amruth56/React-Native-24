@@ -28,7 +28,7 @@ export default function Index() {
     // <StyleApi></StyleApi>
     <View style={styles.container}>
       <Box style={{ backgroundColor: "brown" }}>Box1 - shrink</Box>
-      <Box style={{ backgroundColor: "black", flexShrink: true }}>Box2 - shrink</Box>
+      <Box style={{ backgroundColor: "black", flexShrink: 1 }}>Box2 - shrink</Box>
       {/* <Box style={{ backgroundColor: "violet", alignSelf:"stretch" }}>Box3</Box> */}
       {/* <Box style={{ backgroundColor: "pink", flex: 3 }}>Box4</Box> */}
       {/* <Box style={{ backgroundColor: "green"  }}>Box5</Box> */}
