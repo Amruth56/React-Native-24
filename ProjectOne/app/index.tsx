@@ -1,23 +1,19 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView, Platform } from "react-native";
+import PokemonCard from "@/components/PokemonCard";
 
 export default function Index() {
   return (
-    <View
-      style={styles.container}
-    >
-      <Text>hi.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <PokemonCard></PokemonCard>
+    </SafeAreaView>
   );
 }
 
-
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    backgroundColor:"#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#f5f5f5",
+    paddingTop: Platform.OS === "android" ? 25 : 0,
   },
-  text:{
-  }
-})
+  text: {},
+});
