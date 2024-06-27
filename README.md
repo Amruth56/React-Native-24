@@ -1,7 +1,7 @@
 # React-Native-24
-npx create-expo-app@latest projectName
-cd projectName
-npm start
+npx create-expo-app@latest projectName<br/>
+cd projectName<br/>
+npm start<br/>
 
 
 # welcome page
