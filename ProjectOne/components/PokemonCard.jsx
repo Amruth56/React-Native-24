@@ -1,11 +1,22 @@
-import {View, Text, StyleSheet, Platform} from 'react-native';
+import {View, Text, StyleSheet, Platform, Image} from 'react-native';
 
 import React from 'react'
 
-function PokemonCard() {
+function PokemonCard({
+    name, image, type, category
+}) {
   return (
     <View style = {styles.card}>
-        <Text>Pokemon Card</Text>
+        <View>
+            <Text>{name}</Text>
+            <Text></Text>
+        </View>
+        {/* <Image source={image} accessibility=""></Image> */}
+
+        <View>
+            <Text>{type}</Text>
+            <Text>{category}</Text>
+        </View>
     </View>
   )
 }
