@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Platform,
 } from "react-native";
+import CustomButton from '@/components/CustomButton/CustomButton';
 
 export default function Index() {
   const windowWidth = useWindowDimensions().width;
@@ -25,6 +26,7 @@ export default function Index() {
           ]}
         >
           <Text style={styles.text}>hi .</Text>
+          <CustomButton title="press me" onPress={()=>alert("pressed")}></CustomButton>
         </View>
       </View>
     </SafeAreaView>
