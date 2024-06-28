@@ -36,7 +36,7 @@ function PokemonCard({ name, age, image, type, power, category }) {
       </View>
 
       <View style={styles.powerContainer}>
-        <Text style={styles.powerText}>{power}</Text>
+        <Text style={styles.powerText}>POWER: {power}</Text>
       </View>
 
       <View style={styles.categoryContainer}>
@@ -50,7 +50,7 @@ export default PokemonCard;
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "white",
+    backgroundColor: "lightblue",
     borderRadius: 16,
     borderWidth: 2,
     padding: 16,
@@ -75,9 +75,14 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 30,
     fontWeight: "bold",
+    paddingLeft:50
+    
   },
   age: {
     fontSize: 22,
+    fontStyle: "italic",
+    color:"darkgreen",
+    paddingTop:8
   },
   image: {
     width: "100%",
@@ -107,14 +112,19 @@ const styles = StyleSheet.create({
   },
   powerContainer: {
     marginBottom: 16,
+    flexDirection: "row",
+    justifyContent: "center",
+
   },
   powerText: {
     fontWeight: "bold",
     fontSize: 22,
+    color:'blue'
   },
   categoryContainer: {
     flexDirection: "row",
     marginBottom: 22,
+    justifyContent: "center",
   },
   categoryText: {
     fontSize: 22,
