@@ -6,8 +6,9 @@ export default function Index() {
       name : "Monkey D Luffy",
       age:'19',
       image: require("@/assets/luffy.jpg"),
-      type:"Gum Gum No Mi",
-      category: 'anime',
+      type:"anime",
+      power: 'Gum Gum No Mi', 
+      category:"adventure"
   }
   return (
 

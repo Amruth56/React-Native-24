@@ -14,7 +14,7 @@ const getTypeDetails = (type) => {
   }
 };
 
-function PokemonCard({ name, age, image, type, category }) {
+function PokemonCard({ name, age, image, type, power, category }) {
   const { borderColor, emoji } = getTypeDetails(type);
   return (
     <View style={styles.card}>
@@ -25,17 +25,22 @@ function PokemonCard({ name, age, image, type, category }) {
       <Image
         source={image}
         style={styles.image}
-        accessibility="" /*resizeMode="contain"*/
+        accessibility={`${name}`} /*resizeMode="contain"*/
       ></Image>
 
-      <View>
-        <View>
-          <Text>{type}</Text>
+      <View style={styles.typeContainer}>
+        <View style={[styles.badge, { borderColor }]}>
+          <Text style={styles.typeEmoji}>{emoji}</Text>
+          <Text style={styles.typeText}>{type}</Text>
         </View>
       </View>
 
-      <View>
-        <Text>{category}</Text>
+      <View style={styles.powerContainer}>
+        <Text style={styles.powerText}>{power}</Text>
+      </View>
+
+      <View style={styles.categoryContainer}>
+        <Text style={styles.categoryText}>Category: {category}</Text>
       </View>
     </View>
   );
@@ -79,5 +84,40 @@ const styles = StyleSheet.create({
     height: 300,
     marginBottom: 15,
     borderRadius: 40,
+  },
+  typeContainer: {
+    alignItems: "center",
+    marginBottom: 4,
+  },
+  badge: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 20,
+    borderWidth: 4,
+  },
+  typeEmoji: {
+    fontSize: 25,
+    marginRight: 12,
+  },
+  typeText: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  powerContainer: {
+    marginBottom: 16,
+  },
+  powerText: {
+    fontWeight: "bold",
+    fontSize: 22,
+  },
+  categoryContainer: {
+    flexDirection: "row",
+    marginBottom: 22,
+  },
+  categoryText: {
+    fontSize: 22,
+    fontWeight: "bold",
   },
 });
