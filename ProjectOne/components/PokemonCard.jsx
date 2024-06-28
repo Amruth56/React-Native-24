@@ -1,18 +1,40 @@
 import { View, Text, StyleSheet, Platform, Image } from "react-native";
 
 import React from "react";
+const getTypeDetails = (type) => {
+  switch (type.toLowerCase()) {
+    case "anime":
+      return { borderColor: "#ffd700", emoji: "⚡" };
+    case "cartoon":
+      return { borderColor: "#6493ea", emoji: "🤣" };
+    case "sports":
+      return { borderColor: "#ff5733", emoji: "⚽" };
+    default:
+      return { borderColor: "#000", emoji: "❓" }; // Default case added
+  }
+};
 
 function PokemonCard({ name, age, image, type, category }) {
+  const { borderColor, emoji } = getTypeDetails(type);
   return (
     <View style={styles.card}>
       <View style={styles.nameContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.age}>AGE: {age}</Text>
       </View>
-      <Image source={image} style = {styles.image} accessibility="" /*resizeMode="contain"*/></Image>
+      <Image
+        source={image}
+        style={styles.image}
+        accessibility="" /*resizeMode="contain"*/
+      ></Image>
 
       <View>
-        <Text>{type}</Text>
+        <View>
+          <Text>{type}</Text>
+        </View>
+      </View>
+
+      <View>
         <Text>{category}</Text>
       </View>
     </View>
@@ -40,22 +62,22 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  nameContainer:{
-    flexDirection:"row",
+  nameContainer: {
+    flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom:32,
+    marginBottom: 32,
   },
-  name:{
+  name: {
     fontSize: 30,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
-  age:{
-    fontSize:22,
+  age: {
+    fontSize: 22,
   },
-  image:{
-    width:'100%',
-    height:300,
-    marginBottom:15,
-    borderRadius:40,
-  }
+  image: {
+    width: "100%",
+    height: 300,
+    marginBottom: 15,
+    borderRadius: 40,
+  },
 });
