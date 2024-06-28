@@ -3,7 +3,8 @@ import PokemonCard from "@/components/PokemonCard";
 
 export default function Index() {
   const luffyData ={
-      name : "Luffy",
+      name : "Monkey D Luffy",
+      age:'19',
       image: require("@/assets/luffy.jpg"),
       type:"Gum Gum No Mi",
       category: 'anime',
