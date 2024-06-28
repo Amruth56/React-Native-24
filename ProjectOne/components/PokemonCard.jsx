@@ -50,7 +50,7 @@ export default PokemonCard;
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "lightblue",
+    backgroundColor: "white",
     borderRadius: 16,
     borderWidth: 2,
     padding: 16,
