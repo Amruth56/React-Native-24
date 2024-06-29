@@ -1,26 +1,25 @@
 import { Text, View, FlatList, SafeAreaView, StyleSheet } from "react-native";
-
-import listName from ""
+import FlatLis from "@/components/flatList";
 
 export default function Index() {
   return (
-    <SafeAreaView style = {styles.container}>
-      <FlatList data={listName}
-      renderItem={ ({item}) => {
-        return (
-          <View key = {item.id}>
-            <Text>{item.type}</Text>
-            <Text>{item.name}</Text>
-          </View>
-        )
-      }}></FlatList>
-    </SafeAreaView>
+    // <FlatLis></FlatLis>
+    <View>
+      <Text style = {styles.text}>hi</Text>
+    </View>
   );
 }
 
-
 const styles = StyleSheet.create({
-  container:{
-    flex:1,
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: 'center'
+
+  },
+  text:{
+    backgroundColor:"black",
+    color :"white",
+    textAlign: "center"
   }
-})
+});
