@@ -1,25 +1,21 @@
-import { Text, View, FlatList, SafeAreaView, StyleSheet } from "react-native";
-import FlatLis from "@/components/flatList";
+import { Text, View, StyleSheet, StatusBar, SafeAreaView, TextInput } from "react-native";
 
 export default function Index() {
   return (
-    // <FlatLis></FlatLis>
-    <View>
-      <Text style = {styles.text}>hi</Text>
-    </View>
+    <SafeAreaView
+    style = {styles.container}>
+      <Text>hi</Text>
+      <TextInput></TextInput>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: 'center'
-
-  },
-  text:{
-    backgroundColor:"black",
-    color :"white",
-    textAlign: "center"
+    backgroundColor: "#fff",
+    // alignItems: "center",
+    // justifyContent: "center",
+    paddingTop: StatusBar.currentHeight
   }
-});
+})
