@@ -6,15 +6,29 @@ import {
   StyleSheet,
   Image,
   KeyboardAvoidingView,
-  Platform
+  Platform,
 } from "react-native";
 import { useState } from "react";
 
 export default function Index() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    let errors = {}
+
+    if(!username) errors.username = "username is required"
+    if(!password) errors.password = "username is required"
+    setErrors(errors)
+    return Object.keys(errors).length === 0;
+  }
   return (
-    <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={100} style={styles.container}>
+    <KeyboardAvoidingView
+      behavior="padding"
+      keyboardVerticalOffset={100}
+      style={styles.container}
+    >
       <View style={styles.form}>
         <Image
           source={require("@/assets/minions.png")}
@@ -27,6 +41,9 @@ export default function Index() {
           value={username}
           onChangeText={setUsername}
         ></TextInput>
+        {
+          errors.username ? <Text style = {styles.errorText}>{errors.username}</Text> : null
+        }
         <Text style={styles.label}>Password</Text>
         <TextInput
           style={styles.input}
@@ -35,6 +52,9 @@ export default function Index() {
           value={password}
           onChangeText={setPassword}
         ></TextInput>
+        {
+          errors.password ? <Text style = {styles.errorText}>{errors.password}</Text> : null
+        }
         <Button title="login" onPress={() => {}}></Button>
       </View>
     </KeyboardAvoidingView>
@@ -79,4 +99,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginBottom: 20,
   },
+  errorText:{
+    color: "red",
+    marginBottom:10,
+  }
 });
