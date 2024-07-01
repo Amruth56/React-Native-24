@@ -19,7 +19,7 @@ export default function Index() {
     let errors = {}
 
     if(!username) errors.username = "username is required"
-    if(!password) errors.password = "username is required"
+    if(!password) errors.password = "password is required"; // Corrected the error message
     setErrors(errors)
     return Object.keys(errors).length === 0;
   }
