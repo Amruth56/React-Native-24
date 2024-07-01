@@ -1,13 +1,24 @@
-import { Text, View, StyleSheet, StatusBar, SafeAreaView, TextInput } from "react-native";
-import{useState} from 'react'
+import {
+  Text,
+  View,
+  StyleSheet,
+  StatusBar,
+  SafeAreaView,
+  TextInput,
+} from "react-native";
+import { useState } from "react";
 
 export default function Index() {
-  const [name, setName] = useState("")
+  const [name, setName] = useState("");
   return (
-    <SafeAreaView
-    style = {styles.container}>
-      <TextInput style = {styles.input} value={name} onChangeText={setName}></TextInput>
-      <Text style = {styles.text}>hi {name}</Text>
+    <SafeAreaView style={styles.container}>
+      <TextInput
+        style={styles.input}
+        value={name}
+        onChangeText={setName}
+        placeholder="Enter name here "
+      ></TextInput>
+      <Text style={styles.text}>hi {name}</Text>
     </SafeAreaView>
   );
 }
@@ -18,18 +29,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     // alignItems: "center",
     // justifyContent: "center",
-    paddingTop: StatusBar.currentHeight
+    paddingTop: StatusBar.currentHeight,
   },
-  input:{
+  input: {
     height: 50,
-    margin:12,
-    padding:10,
-    borderWidth:1,
-    borderRadius:9
+    margin: 12,
+    padding: 10,
+    borderWidth: 1,
+    borderRadius: 9,
   },
-   text:{
+  text: {
     textAlign: "center",
     fontSize: 30,
-    color:"orange"
-  }
-})
+    color: "orange",
+  },
+});
