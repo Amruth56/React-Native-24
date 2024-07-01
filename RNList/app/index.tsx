@@ -5,11 +5,13 @@ import {
   StatusBar,
   SafeAreaView,
   TextInput,
+  Switch,
 } from "react-native";
 import { useState } from "react";
 
 export default function Index() {
   const [name, setName] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
       <TextInput
@@ -18,7 +20,11 @@ export default function Index() {
         onChangeText={setName}
         placeholder="Enter name here "
       ></TextInput>
-      <TextInput style={styles.input} secureTextEntry placeholder="enter password"></TextInput>
+      <TextInput
+        style={styles.input}
+        secureTextEntry
+        placeholder="enter password"
+      ></TextInput>
       <TextInput
         style={styles.input}
         placeholder="Enter number"
@@ -32,7 +38,21 @@ export default function Index() {
       ></TextInput>
       <Text style={styles.text}>hi {name}</Text>
 
-      <TextInput style={styles.input} placeholder="message" multiline></TextInput>
+      <TextInput
+        style={styles.input}
+        placeholder="message"
+        multiline
+      ></TextInput>
+
+      <View style={styles.switchContainer}>
+        <Text style={styles.dark}>Dark Mode</Text>
+        <Switch
+          value={isDarkMode}
+          onValueChange={() => setIsDarkMode((prevState) => !prevState)}
+          trackColor={{ false: "green", true: "blue" }}
+          thumbColor={isDarkMode ? "white" : "black"}
+        ></Switch>
+      </View>
     </SafeAreaView>
   );
 }
@@ -56,5 +76,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
     color: "orange",
+  },
+  dark: {
+    color: "black",
+  },
+  switchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
   },
 });
