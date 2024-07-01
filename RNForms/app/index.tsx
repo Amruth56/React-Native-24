@@ -16,12 +16,21 @@ export default function Index() {
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
-    let errors = {}
+    let errors :{username?: string; password?: string} = {}
 
-    if(!username) errors.username = "username is required"
-    if(!password) errors.password = "password is required"; // Corrected the error message
+    if(!username) {errors.username = "username is required"}
+    if(!password) {errors.password = "password is required";} // Corrected the error message
     setErrors(errors)
     return Object.keys(errors).length === 0;
+  }
+
+  const handleSubmit = () => {
+    if(validateForm()){
+      console.log("Submitted", username, password)
+      setUsername("")
+      setPassword("")
+      setErrors({})
+    }
   }
   return (
     <KeyboardAvoidingView
@@ -55,7 +64,7 @@ export default function Index() {
         {
           errors.password ? <Text style = {styles.errorText}>{errors.password}</Text> : null
         }
-        <Button title="login" onPress={() => {}}></Button>
+        <Button title="login" onPress={() => {handleSubmit()}}></Button>
       </View>
     </KeyboardAvoidingView>
   );
