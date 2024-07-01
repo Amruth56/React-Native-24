@@ -5,7 +5,7 @@ export default function Index() {
     <SafeAreaView
     style = {styles.container}>
       <Text>hi</Text>
-      <TextInput></TextInput>
+      <TextInput style = {styles.input}></TextInput>
     </SafeAreaView>
   );
 }
@@ -17,5 +17,12 @@ const styles = StyleSheet.create({
     // alignItems: "center",
     // justifyContent: "center",
     paddingTop: StatusBar.currentHeight
+  },
+  input:{
+    height: 50,
+    margin:12,
+    padding:10,
+    borderWidth:1,
+    borderRadius:9
   }
 })
