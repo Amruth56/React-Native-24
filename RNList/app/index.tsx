@@ -17,10 +17,22 @@ export default function Index() {
         value={name}
         onChangeText={setName}
         placeholder="Enter name here "
-      ></TextInput >
-      <TextInput style={styles.input} secureTextEntry></TextInput>
-      <TextInput style={styles.input} placeholder="Enter number" keyboardType="numeric"></TextInput>
+      ></TextInput>
+      <TextInput style={styles.input} secureTextEntry placeholder="enter password"></TextInput>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter number"
+        keyboardType="numeric"
+      ></TextInput>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter email"
+        autoCapitalize="none"
+        autoCorrect={false}
+      ></TextInput>
       <Text style={styles.text}>hi {name}</Text>
+
+      <TextInput style={styles.input} placeholder="message" multiline></TextInput>
     </SafeAreaView>
   );
 }
