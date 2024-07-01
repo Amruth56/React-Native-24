@@ -17,7 +17,9 @@ export default function Index() {
         value={name}
         onChangeText={setName}
         placeholder="Enter name here "
-      ></TextInput>
+      ></TextInput >
+      <TextInput style={styles.input} secureTextEntry></TextInput>
+      <TextInput style={styles.input} placeholder="Enter number" keyboardType="numeric"></TextInput>
       <Text style={styles.text}>hi {name}</Text>
     </SafeAreaView>
   );
