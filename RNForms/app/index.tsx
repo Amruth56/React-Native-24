@@ -56,7 +56,7 @@ export default function Index() {
         <Text style={styles.label}>Password</Text>
         <TextInput
           style={styles.input}
-          placeholder="Password"
+          placeholder="Password" 
           secureTextEntry
           value={password}
           onChangeText={setPassword}
