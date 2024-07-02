@@ -5,11 +5,13 @@ import {
   SafeAreaView,
   StatusBar,
   FlatList,
+  ActivityIndicator
 } from "react-native";
 import { useState, useEffect } from "react";
 
 export default function Index() {
   const [postList, setPostList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
 
   const fetchData = async (limit = 10) => {
     const response = await fetch(
@@ -18,6 +20,7 @@ export default function Index() {
     //convert response to json
     const data = await response.json();
     setPostList(data);
+    setIsLoading(false)
   };
 
   useEffect(() => {
