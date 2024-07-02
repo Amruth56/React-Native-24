@@ -27,6 +27,15 @@ export default function Index() {
     fetchData();
   }, []);
 
+  if(isLoading){
+    return(
+      <SafeAreaView style = {styles.loadingContainer}>
+        <ActivityIndicator size = 'large' color = '0000ff'></ActivityIndicator>
+        <Text>LoAdInG...</Text>
+      </SafeAreaView>
+    )
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.listContainer}>
@@ -90,4 +99,11 @@ const styles = StyleSheet.create({
     marginTop: 12,
     marginBottom: 12,
   },
+  loadingContainer:{
+    flex:1,
+    backgroundColor:'f5f5f5',
+    paddingTop:StatusBar.currentHeight,
+    justifyContent:"center",
+    alignItems: "center",
+  }
 });
