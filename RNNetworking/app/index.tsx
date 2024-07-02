@@ -44,6 +44,10 @@ export default function Index() {
     });
     const newPost = await response.json()
     setPostList([newPost, ...postList]);
+    setPostTitle("")
+    setPostBody("")
+    setIsPosting(false)
+
   };
 
   useEffect(() => {
